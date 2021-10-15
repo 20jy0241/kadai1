@@ -24,8 +24,9 @@ public class DrawFigure {
 		EZ.addLine(0,20, 200,20, Color.RED, 1);
 
 		//矩形を描く(中心座標x, y, 終点x, 終点y, 色, 塗りつぶし)
-		EZ.addRectangle(100,300, 100,50, Color.CYAN, true);
-
+		EZRectangle rect = EZ.addRectangle(100,300, 100,50, Color.CYAN, true);
+		rect.translateTo(300,100);
+		
 		//ポリゴンを描く(座標配列x,y, 色, 塗りつぶし)
 		int[] xp = {200,300,220,250,290,200};
 		int[] yp = {100,100,200,80,190,100};
