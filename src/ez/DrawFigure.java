@@ -17,7 +17,7 @@ public class DrawFigure {
 		EZ.initialize(400, 400); // 画面の大きさを決める．
 
 		//背景色を設定
-		EZ.setBackgroundColor(Color.LIGHT_GRAY);
+		EZ.setBackgroundColor(Color.WHITE);
 
 		//線を描く(始点x, 始点y, 終点x, 終点y, 色, 線幅)
 		EZ.addLine(40,0, 40,50, Color.RED, 1);
@@ -34,7 +34,8 @@ public class DrawFigure {
 		
 
 		//イメージを描画 (ファイル名, 中心座標x,y)
-		EZ.addImage("src/ez/cat.jpg", 300,300);
+		EZImage cat = EZ.addImage("src/ez/cat.jpg", 300,300);
+		cat.turnLeft(30);
 
 		//文字を描画する(文字列の中心座標x, y, 文字列，色 [,サイズ] )
 		EZ.addText(40,20, "Hello World", Color.BLACK, 12);
